@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
+    <DockerTargetOS>Linux</DockerTargetOS>
+    <MvcRazorCompileOnPublish>false</MvcRazorCompileOnPublish>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <Authors>Scott Florisson</Authors>
+    <Company>Intalex Technologies</Company>
+    <Product>Intalex Net Core Angular SPA Template</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="srf.api.core" Version="2.0.0" />
+    <PackageReference Include="SRF.API.Proxy" Version="0.1.2" />
+  </ItemGroup>
+
+</Project>

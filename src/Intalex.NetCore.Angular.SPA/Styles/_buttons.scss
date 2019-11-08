@@ -1,0 +1,78 @@
+﻿$dark-fg: #3964CD !default;
+$dark-disabled-bg: #93969c !default;
+$light-fg: #fff !default;
+$light-bg: #3257C8 !default;
+$light-disabled-bg: #62656f !default;
+
+@mixin button($dark: false) {
+    @include unselectable;
+    padding: 6px 10px;
+    border-collapse: collapse;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.99em;
+    box-sizing: border-box;
+    display: inline-block;
+
+
+    @if $dark == true {
+        background-color: $dark-disabled-bg;
+        background-color: transparent;
+        border: 1px solid #fff;
+    }
+    @else {
+        background-color: $light-disabled-bg;
+        background-color: $light-bg;
+        background-color: #fff;
+        color: #0070DC;
+        border: 1px solid #798caa;
+    }
+
+    &:hover {
+        color: #91a5c3;
+        border-color: #91a5c3;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &[disabled="disabled"],
+    &.disabled {
+        cursor: not-allowed;
+
+        @if $dark == true {
+            background-color: $dark-disabled-bg;
+        }
+        @else {
+            background-color: $light-disabled-bg;
+            color: #d1e4f6;
+        }
+    }
+}
+
+@mixin button-primary($dark: false) {
+    @include button;
+
+    @if $dark == true {
+        color: $dark-fg;
+        background-color: #fff;
+    }
+    @else {
+        color: $light-fg;
+        background-color: $light-bg;
+    }
+
+
+    &:hover {
+        @if $dark == true {
+            color: $dark-fg;
+            border-color: #507fc4;
+        }
+        @else {
+            color: #d9e6f8;
+            border-color: #063d8e;
+        }
+    }
+}

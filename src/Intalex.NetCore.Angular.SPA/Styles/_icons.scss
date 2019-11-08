@@ -1,0 +1,228 @@
+﻿
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+
+.loading-icon {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+}
+
+
+i {
+    &[class*="icon-"] {
+        @include fa-icon;
+        @extend .fas;
+        vertical-align: initial;
+        /*&:hover {
+            color: #09a2ff;
+        }*/
+        &.icon-home {
+            &:before {
+                content: fa-content($fa-var-home);
+            }
+        }
+
+        &.icon-login {
+            &:before {
+                content: fa-content($fa-var-sign-in-alt);
+            }
+        }
+
+        &.icon-logout {
+            &:before {
+                content: fa-content($fa-var-sign-out-alt);
+            }
+        }
+
+        &.icon-delete {
+            &:before {
+                content: fa-content($fa-var-trash);
+            }
+        }
+
+        &.icon-revoke {
+            &:before {
+                content: fa-content($fa-var-trash);
+            }
+        }
+
+        &.icon-edit {
+            &:before {
+                content: fa-content($fa-var-edit);
+            }
+        }
+
+        &.icon-save {
+            &:before {
+                content: fa-content($fa-var-save);
+            }
+        }
+
+        &.icon-cancel {
+            &:before {
+                content: fa-content($fa-var-undo-alt);
+            }
+        }
+
+        &.icon-add {
+            &:before {
+                content: fa-content($fa-var-plus-square);
+            }
+        }
+
+        &.icon-remove {
+            &:before {
+                content: fa-content($fa-var-trash);
+            }
+        }
+
+        &.icon-preview-placeholder,
+        &.icon-image-ph {
+            &:before {
+                content: fa-content($fa-var-image);
+            }
+        }
+
+        &.icon-tick {
+            color: #54C16B;
+
+            &:before {
+                content: fa-content($fa-var-check);
+            }
+        }
+
+        &.icon-pass {
+            color: #28b646;
+
+            &:before {
+                content: fa-content($fa-var-check);
+            }
+        }
+
+        &.icon-fail {
+            color: #d0021b;
+
+            &:before {
+                content: fa-content($fa-var-times);
+            }
+        }
+
+        &.icon-invalid {
+            color: #f59800;
+
+            &:before {
+                content: fa-content($fa-var-exclamation-circle);
+            }
+        }
+
+        &.icon-info {
+            color: #327dde;
+
+            &:before {
+                content: fa-content($fa-var-info-circle);
+            }
+        }
+
+        &.icon-warning {
+            color: #E1961B;
+
+            &:before {
+                content: fa-content($fa-var-exclamation-triangle);
+            }
+        }
+
+        &.icon-error {
+            color: #d0021b;
+
+            &:before {
+                content: fa-content($fa-var-exclamation-circle);
+            }
+        }
+
+        &.icon-undo {
+            color: #0070D2;
+            transform: rotate(270deg);
+            -moz-transform: rotate(270deg);
+            -webkit-transform: rotate(270deg);
+            -ms-transform: rotate(270deg);
+
+            &:before {
+                content: fa-content($fa-var-level-up-alt);
+            }
+        }
+
+        &.icon-redo {
+            color: #0070D2;
+            transform: scaleX(-1) rotate(270deg);
+            -moz-transform: scaleX(-1) rotate(270deg);
+            -webkit-transform: scaleX(-1) rotate(270deg);
+            -ms-transform: scaleX(-1) rotate(270deg);
+
+            &:before {
+                content: fa-content($fa-var-level-up-alt);
+            }
+        }
+
+        &.icon-clear {
+
+            &:before {
+                content: fa-content($fa-var-ban);
+            }
+        }
+
+        &.icon-reset {
+            color: #0070DC;
+
+            &:before {
+                content: fa-content($fa-var-exclamation-circle);
+            }
+        }
+
+        &.icon-preview-eye {
+            color: #0070DC;
+
+            &:before {
+                content: fa-content($fa-var-eye);
+            }
+        }
+
+        &.icon-zoom-enlarge {
+            color: #0070DC;
+
+            &:before {
+                content: fa-content($fa-var-search-plus);
+            }
+        }
+
+        &.icon-zoom-shrink {
+            color: #0070DC;
+
+            &:before {
+                content: fa-content($fa-var-search-minus);
+            }
+        }
+
+        &.icon-move {
+            color: #fff;
+
+            &:before {
+                content: fa-content($fa-var-arrows-alt);
+            }
+        }
+
+        &.icon-preview-close {
+
+            &:before {
+                content: fa-content($fa-var-times);
+            }
+        }
+
+        &.icon-close {
+            &:before {
+                content: fa-content($fa-var-times);
+            }
+        }
+    }
+}

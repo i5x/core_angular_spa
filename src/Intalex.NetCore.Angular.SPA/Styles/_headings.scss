@@ -1,0 +1,13 @@
+﻿
+@mixin heading($level: 1) {
+
+    @if $level == 2 {
+        font-size: 1.5em;
+        color: #1F2A4F;
+    }
+
+    @if $level == 3 {
+        font-size: 1.3em;
+        color: #1F2A4F;
+    }
+}

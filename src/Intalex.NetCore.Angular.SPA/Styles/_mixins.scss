@@ -1,0 +1,51 @@
+﻿
+@mixin unselectable {
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+
+@mixin calcHeight($first, $second) {
+    /* Firefox */
+    height: -moz-calc(#{$first} - #{$second});
+    /* WebKit */
+    height: -webkit-calc(#{$first} - #{$second});
+    /* Opera */
+    height: -o-calc(#{$first} - #{$second});
+    /* Standard */
+    height: calc(#{$first} - #{$second});
+}
+
+@mixin calcWidth($first, $second) {
+    /* Firefox */
+    width: -moz-calc(#{$first} - #{$second});
+    /* WebKit */
+    width: -webkit-calc(#{$first} - #{$second});
+    /* Opera */
+    width: -o-calc(#{$first} - #{$second});
+    /* Standard */
+    width: calc(#{$first} - #{$second});
+}
+
+
+
+@mixin grid-item() {
+    padding: 5px 3px;
+
+    &:nth-child(odd) {
+        background-color: #eee;
+    }
+
+    &:hover {
+        background-color: #b4cdff;
+    }
+}
+
+@mixin grid-column($minWidth: 80px) {
+    display: inline-block;
+    flex: auto;
+    min-width: $minWidth;
+}

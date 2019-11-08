@@ -1,0 +1,20 @@
+﻿
+.system-versions {
+    .system-version-item {
+        @include grid-item;
+
+        [class*="field-system-"] {
+            @include grid-column(50px);
+            width: 280px;
+        }
+
+
+        .field-system-name {
+        }
+
+        .field-system-version {
+            width: 250px;
+        }
+    }
+}
+

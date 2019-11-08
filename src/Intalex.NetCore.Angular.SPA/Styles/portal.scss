@@ -1,0 +1,59 @@
+﻿$fa-font-path: "../fonts";
+
+@import "_mixins.scss";
+@import "_icons.scss";
+@import "_buttons.scss";
+@import "_headings.scss";
+@import "_forms.scss";
+@import "_template.scss";
+@import "_dialog.scss";
+@import "_versions.scss";
+@import "components/_components.scss";
+
+
+.field {
+    display: inline-block;
+    vertical-align: top;
+
+    div[ng-transclude] {
+        display: inline;
+    }
+}
+
+
+.json-validator-unchecked {
+}
+
+.json-validator-checked {
+    &.json-validator-valid {
+        border-color: #91d39e;
+    }
+
+    &.json-validator-invalid {
+        border-color: #ff0000;
+    }
+}
+
+
+
+/*Temp code*/
+button {
+    background: none;
+    border: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-collapse: collapse;
+    cursor: pointer;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    padding: 3px 5px;
+    color: #333;
+
+    &:hover {
+        color: #111;
+        background-color: rgb(43, 155, 191);
+    }
+}

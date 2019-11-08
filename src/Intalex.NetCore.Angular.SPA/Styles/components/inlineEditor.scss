@@ -1,0 +1,30 @@
+﻿$fieldWidth: 150px;
+
+.inline-editor {
+    display: inline-block;
+
+    .mode-read {
+        .model-value {
+            display: inline-block;
+            min-width: $fieldWidth;
+        }
+    }
+
+    input[type=text] {
+        min-width: $fieldWidth;
+        font-size: inherit;
+        color: inherit;
+        border: 1px solid #eee;
+        border-collapse: collapse;
+        box-shadow: none;
+        font-weight: inherit;
+    }
+
+    .btn-edit {
+        color: rgba(120, 120, 120, 0.25);
+
+        &:hover {
+            color: #222;
+        }
+    }
+}

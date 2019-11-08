@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "outDir": "compiled",
+    "module": "es6",
+    "moduleResolution": "node",
+    "target": "es5",
+    "typeRoots": [
+      "../node_modules/@types"
+    ],
+    "baseUrl": "Scripts",
+    "types": []
+  },
+  "exclude": [
+    "wwwroot"
+  ],
+  "typeAcquisition": {
+    "enable": false,
+    "exclude": [ "node" ]
+  }
+}

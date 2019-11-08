@@ -1,0 +1,119 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intalex Management Portal</title>
+</head>
+<body>
+    <style>
+
+        .app-loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(230, 230, 230, 0.70);
+            transition: all 1s linear;
+            display: block;
+            z-index: 199;
+            visibility: visible;
+        }
+
+            .app-loading .container {
+                position: absolute;
+                top: 40%;
+                width: 100%;
+                text-align: center;
+            }
+
+                .app-loading .container > div {
+                    display: inline-block;
+                    vertical-align: top;
+                    background-color: rgba(9, 68, 160, 0.90);
+                    padding-right: 30px;
+                }
+
+            .app-loading .app-loading-text {
+                font: 40px arial;
+                color: #fff;
+                margin: 0;
+                display: inline-block;
+                margin-top: 25px;
+                vertical-align: top;
+            }
+
+
+
+            .app-loading.loaded {
+                visibility: hidden;
+                opacity: 0;
+            }
+
+        .app-loading-icon {
+            width: 100px;
+            display: inline-block;
+            animation-name: rotate;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @@keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <div class="app-loading" ng-class="{'loaded': true }">
+        <div class="container">
+            <div>
+
+                <svg class="app-loading-icon" version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+                <path fill="#fff" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50">
+                  </path>
+                </svg>
+                <span class="app-loading-text">Loading</span>
+            </div>
+        </div>
+    </div>
+
+    <ix-nav></ix-nav>
+    <div class="container body-content">
+        <ui-view></ui-view>
+    </div>
+    <ix-footer></ix-footer>
+
+    <environment include="Development">
+        <script type="text/javascript">
+            var link = document.createElement('link');
+            link.setAttribute('rel', 'stylesheet');
+            link.setAttribute('href', '/css/portal.css');
+            document.head.appendChild(link);
+        </script>
+        <script src="~/js/vendor.bundle.js"></script>
+        <script src="~/js/app.bundle.js"></script>
+
+    </environment>
+    <environment exclude="Development">
+        <script type="text/javascript">
+            var link = document.createElement('link');
+            link.setAttribute('rel', 'stylesheet');
+            link.setAttribute('href', '/css/portal.css');//TODO: add version for cache busting
+            document.head.appendChild(link);
+        </script>
+        <script src="~/js/vendor.bundle.js" asp-append-version="true"></script>
+        <script src="~/js/app.bundle.js" asp-append-version="true"></script>
+    </environment>
+
+</body>
+</html>
