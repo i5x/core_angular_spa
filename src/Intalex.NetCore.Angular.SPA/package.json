@@ -6,7 +6,6 @@
   "repository": "https://github.com/i5x/core_angular_spa.git",
   "dependencies": {
     "@aspnet/signalr": "^1.1.4",
-    "@intalex/auth": "0.1.0",
     "@intalex/common": "0.1.0",
     "@types/jquery": "^3.3.29",
     "angular": "^1.7.0",
@@ -29,7 +28,12 @@
     "uglifyjs-webpack-plugin": "^1.2.5",
     "webpack": "^4.10.1",
     "ts-loader": "^4.3.0",
-    "typescript": "^3.1.6"
+    "typescript": "^3.1.6",
+    "underscore.string": ">=3.3.5",
+    "diff": ">=3.5.0",
+    "js-yaml": ">=3.13.1",
+    "minimatch": ">=3.0.2",
+    "lodash": ">=4.17.13"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
