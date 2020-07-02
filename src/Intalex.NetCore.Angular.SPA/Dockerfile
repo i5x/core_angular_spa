@@ -30,6 +30,9 @@ ARG build_version
 RUN dotnet publish "Intalex.NetCore.Angular.SPA.csproj" -c Release -o /app /p:Version=${build_version}
 
 FROM base AS final
+LABEL Description="Website | Intalex"
+LABEL Vendor="Intalex Technologies"
+LABEL Maintaner="Scott Florisson"
 WORKDIR /app
 COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "Intalex.NetCore.Angular.SPA.dll"]
